@@ -1,6 +1,7 @@
 import CalendarGrid from "./components/CalendarGrid";
 import DayCounter from "./components/DayCounter";
 import FlipCountdown from "./components/FlipCountdown";
+import FloatingMusicPlayer from "./components/FloatingMusicPlayer";
 import FloatingParticles from "./components/FloatingParticles";
 import PhotoSection from "./components/PhotoSection";
 
@@ -11,7 +12,6 @@ function TitleSection() {
       data-ocid="ananya.title.section"
       className="text-center pt-4 md:pt-8"
     >
-      {/* Main Title */}
       <h1
         className="font-display font-bold tracking-[0.2em] animate-fade-in-up animate-title-glow select-none"
         style={{
@@ -27,7 +27,6 @@ function TitleSection() {
         ANONNA
       </h1>
 
-      {/* Subtitle */}
       <p
         className="font-body mt-4 md:mt-6 tracking-[0.25em] text-sm md:text-base lg:text-lg animate-fade-in-up-delay"
         style={{ color: "oklch(0.65 0.10 310)" }}
@@ -42,7 +41,6 @@ function TitleSection() {
         একটি অপেক্ষা
       </p>
 
-      {/* Decorative line */}
       <div className="mt-8 md:mt-10 flex items-center justify-center gap-3">
         <div
           style={{
@@ -92,7 +90,6 @@ function QuoteSection() {
             "0 0 40px oklch(0.72 0.22 340 / 0.15), 0 0 80px oklch(0.65 0.18 290 / 0.08), inset 0 1px 0 oklch(0.95 0.03 320 / 0.08)",
         }}
       >
-        {/* Decorative quote mark */}
         <div
           className="absolute font-display font-bold select-none pointer-events-none"
           style={{
@@ -108,7 +105,6 @@ function QuoteSection() {
           &ldquo;
         </div>
 
-        {/* Quote text */}
         <blockquote className="relative z-10" lang="bn">
           <p
             className="font-body leading-loose whitespace-pre-line"
@@ -120,12 +116,11 @@ function QuoteSection() {
           >
             {`কারোর জন্য সারা জীবন অপেক্ষা করা বোকামি।
 তাই তাকে কিছু নির্দিষ্ট সময় দিয়ে অপেক্ষা করে
-নিজের জীবন সুন্দরভাবে গড়ে তোলাই হচ্ছে মানবিক।
+নিজের জীবন সুন্দরভাবে গড়ে তোলাই হচ্ছে মানবিক।
 কারণ জীবন বারবার আসে না।`}
           </p>
         </blockquote>
 
-        {/* Closing quote decoration */}
         <div className="mt-5 flex items-center gap-3">
           <div
             style={{
@@ -213,10 +208,8 @@ export default function App() {
           "linear-gradient(160deg, oklch(0.13 0.07 295) 0%, oklch(0.17 0.08 310) 35%, oklch(0.16 0.07 330) 65%, oklch(0.14 0.06 350) 100%)",
       }}
     >
-      {/* Floating particle background */}
       <FloatingParticles />
 
-      {/* Atmospheric mesh gradient overlay */}
       <div
         className="fixed inset-0 pointer-events-none"
         style={{
@@ -227,7 +220,6 @@ export default function App() {
         role="presentation"
       />
 
-      {/* Main content */}
       <main
         className="relative flex flex-col items-center px-4 sm:px-6 md:px-8 py-12 md:py-16 gap-16 md:gap-24"
         style={{ zIndex: 2 }}
@@ -240,6 +232,9 @@ export default function App() {
         <DayCounter />
         <Footer />
       </main>
+
+      {/* Floating background music player */}
+      <FloatingMusicPlayer />
     </div>
   );
 }
